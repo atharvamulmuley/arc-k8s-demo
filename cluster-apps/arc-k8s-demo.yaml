@@ -1,12 +1,12 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: arc-k8s-demo
+  name: arc-k8s-demo-2
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: arc-k8s-demo
+      app: arc-k8s-demo-2
   strategy:
     rollingUpdate:
       maxSurge: 1
@@ -15,7 +15,7 @@ spec:
   template:
     metadata:
       labels:
-        app: arc-k8s-demo
+        app: arc-k8s-demo-2
     spec:
       nodeSelector:
         kubernetes.io/arch: amd64
